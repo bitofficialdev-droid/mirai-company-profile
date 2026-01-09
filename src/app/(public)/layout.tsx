@@ -1,5 +1,14 @@
 import { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import CWNavbar from "@/components/web/cw_navbar";
+import CWFooter from "@/components/web/cw_footer";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -29,7 +38,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body
+        className={`${poppins.className} flex min-h-screen flex-col antialiased`}
+      >
+        <CWNavbar />
+
+        <div className="h-25 w-full bg-[#0451bf]"></div>
+
+        <main>{children}</main>
+
+        <CWFooter />
+      </body>
     </html>
   );
 }

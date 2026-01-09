@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "Browser-Edge",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "timeout": 30000 // Menunggu server siap hingga 30 detik
+    },
+    {
+      "name": "Browser-Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug with Chrome",
+      "configurations": ["Server-side", "Browser-Chrome"]
+    },
+    {
+      "name": "Debug with Edge",
+      "configurations": ["Server-side", "Browser-Edge"]
+    }
+  ]
+}
