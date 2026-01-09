@@ -2,100 +2,27 @@
 
 import { useState, useMemo } from "react";
 import { CSButton } from "@/components/shared/cs_button";
+import { NewsRepository } from "@/core/repositories/news.repo";
 
 export default function NewsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
-
-  const data = {
-    hero: {
-      title:
-        "Latest <span class='text-[#0451bf]'>Insights</span> & <span class='text-[#0451bf]'>News</span>",
-      description:
-        "Eksplorasi artikel terbaru, tren teknologi, dan pembaruan strategis dari tim ahli kami.",
-    },
-    featured: {
-      id: 1,
-      category: "Technology",
-      title:
-        "Transformasi Digital: Bagaimana AI Mengubah Landskap Bisnis di 2026",
-      description:
-        "Eksplorasi mendalam tentang integrasi kecerdasan buatan dalam alur kerja perusahaan modern dan dampaknya terhadap efisiensi operasional.",
-      date: "Oct 24, 2025",
-    },
-    posts: [
-      {
-        id: 2,
-        category: "Company",
-        title: "Ekspansi Kantor Baru di Jakarta Selatan",
-        description: "Langkah besar kami untuk lebih dekat dengan klien.",
-        date: "Oct 20, 2025",
-      },
-      {
-        id: 3,
-        category: "Tutorial",
-        title: "Tips Mengoptimalkan Performa Web App",
-        description:
-          "Panduan teknis bagi pengembang untuk kecepatan rendering.",
-        date: "Oct 15, 2025",
-      },
-      {
-        id: 4,
-        category: "Event",
-        title: "Rekap Tech Conference 2025",
-        description: "Momen berharga saat tim kami berbagi insight.",
-        date: "Oct 10, 2025",
-      },
-      {
-        id: 5,
-        category: "Technology",
-        title: "Masa Depan Web Development",
-        description: "Tren pengembangan web yang akan mendominasi.",
-        date: "Oct 05, 2025",
-      },
-      {
-        id: 6,
-        category: "Company",
-        title: "Budaya Kerja Remote di Era Baru",
-        description: "Bagaimana kami mengelola tim secara global.",
-        date: "Sep 28, 2025",
-      },
-      {
-        id: 7,
-        category: "Tutorial",
-        title: "Next.js 15: Apa yang Baru?",
-        description: "Fitur-fitur terbaru yang wajib Anda coba.",
-        date: "Sep 20, 2025",
-      },
-      {
-        id: 8,
-        category: "Event",
-        title: "Workshop UI/UX Design",
-        description: "Belajar membuat desain yang user-centric.",
-        date: "Sep 15, 2025",
-      },
-      {
-        id: 9,
-        category: "Technology",
-        title: "Keamanan Data di Cloud",
-        description: "Cara menjaga privasi data perusahaan Anda.",
-        date: "Sep 10, 2025",
-      },
-    ],
-    categories: ["All", "Technology", "Company", "Tutorial", "Event"],
-  };
+  const data = NewsRepository.getNews();
 
   const filteredPosts = useMemo(() => {
     return activeCategory === "All"
       ? data.posts
-      : data.posts.filter((post) => post.category === activeCategory);
+      : (data.posts ?? []).filter((post) => post.category === activeCategory);
   }, [activeCategory, data.posts]);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const currentPosts = (filteredPosts ?? []).slice(
+    indexOfFirstPost,
+    indexOfLastPost,
+  );
+  const totalPages = Math.ceil((filteredPosts ?? []).length / postsPerPage);
 
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
@@ -130,17 +57,17 @@ export default function NewsPage() {
             <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:p-16">
               <div className="mb-6 flex items-center gap-3">
                 <span className="rounded-lg bg-[#7efc62] px-3 py-1 text-xs font-bold text-[#0451bf]">
-                  {data.featured.category}
+                  {data.featured?.category ?? "-"}
                 </span>
                 <span className="text-sm text-gray-400">
-                  {data.featured.date}
+                  {data.featured?.date ?? "-"}
                 </span>
               </div>
               <h2 className="mb-6 text-3xl leading-tight font-bold text-[#0451bf] md:text-4xl">
-                {data.featured.title}
+                {data.featured?.title ?? "-"}
               </h2>
               <p className="mb-8 text-lg text-gray-600">
-                {data.featured.description}
+                {data.featured?.description ?? "-"}
               </p>
               <CSButton
                 color="primary"
@@ -160,7 +87,7 @@ export default function NewsPage() {
           {/* Tabs Filter */}
           <div className="mb-12 flex flex-col items-center justify-between gap-6 border-b border-gray-100 pb-8 md:flex-row">
             <div className="flex flex-wrap justify-center gap-2">
-              {data.categories.map((cat) => (
+              {(data.categories ?? []).map((cat) => (
                 <button
                   key={cat}
                   onClick={() => handleCategoryChange(cat)}
@@ -175,9 +102,10 @@ export default function NewsPage() {
               ))}
             </div>
             <div className="text-sm font-medium text-gray-400">
-              Showing {filteredPosts.length > 0 ? indexOfFirstPost + 1 : 0} -{" "}
-              {Math.min(indexOfLastPost, filteredPosts.length)} of{" "}
-              {filteredPosts.length} Articles
+              Showing{" "}
+              {(filteredPosts ?? []).length > 0 ? indexOfFirstPost + 1 : 0} -{" "}
+              {Math.min(indexOfLastPost, (filteredPosts ?? []).length)} of{" "}
+              {(filteredPosts ?? []).length} Articles
             </div>
           </div>
 
