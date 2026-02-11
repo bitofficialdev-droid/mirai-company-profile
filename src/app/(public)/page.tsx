@@ -49,7 +49,7 @@ export default function RootPage() {
             </div>
 
             <div className="flex justify-center lg:w-3/5">
-              <div className="relative md:h-110 md:w-110 lg:h-136 lg:w-137.5">
+              <div className="relative md:h-110 md:w-110 lg:h-110 lg:w-175">
                 <HeroImageSection heroData={data.hero} />
               </div>
             </div>
