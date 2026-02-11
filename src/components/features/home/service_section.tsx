@@ -73,32 +73,6 @@ export default function ServicesSection({ serviceData }: ServicesSectionProps) {
                     {s.description ?? ""}
                   </p>
                 </div>
-
-                <div className="pointer-events-none relative z-0 mt-8">
-                  <CSButton
-                    variant="text"
-                    color="primary"
-                    size="small"
-                    rightIcon={
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="transition-all duration-300 group-hover:translate-x-1"
-                      >
-                        <path d="M5 12h14m-7-7 7 7-7 7" />
-                      </svg>
-                    }
-                    className="p-0 font-medium tracking-wider text-[#0451bf] uppercase"
-                  >
-                    Learn More
-                  </CSButton>
-                </div>
               </div>
             ))}
           </div>

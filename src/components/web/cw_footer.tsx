@@ -1,12 +1,5 @@
 import { CSButton } from "../shared/cs_button";
 
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "News", href: "/news" },
-  { label: "Career", href: "/career" },
-];
-
 export default function CWFooter() {
   return (
     <footer className="bg-[#021027] pt-24 pb-12 text-white">
@@ -26,18 +19,6 @@ export default function CWFooter() {
               Explore
             </h5>
             <ul className="space-y-4">
-              {NAV_LINKS.map((link) => (
-                <li key={link.label}>
-                  <CSButton
-                    href={link.href}
-                    variant="text"
-                    color="white"
-                    className="text-sm text-gray-400 transition-colors hover:text-[#7efc62]"
-                  >
-                    {link.label}
-                  </CSButton>
-                </li>
-              ))}
               <li key="contact-us">
                 <CSButton
                   href=""
@@ -59,18 +40,13 @@ export default function CWFooter() {
               <br />
               Jl. Kalimantan, Gandamekar, Kec.Cikarang Barat, Kabupaten Bekasi,
               Jawa Barat 17530, Indonesia.
-              <br />
-              <span className="mt-4 block">info@miraisoftnet.com</span>
             </p>
           </div>
           <div>
             <h5 className="mb-8 text-xs font-bold tracking-widest text-gray-500 uppercase">
-              Newsletter
+              Email
             </h5>
-            <p className="mb-4 text-xs text-gray-400">
-              Dapatkan update teknologi terbaru dari kami.
-            </p>
-            <div className="h-12 rounded-lg border border-white/10 bg-white/5" />{" "}
+            <p className="mb-4 text-xs text-gray-400">info@miraisoftnet.com</p>
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-6 border-t border-white/5 pt-12 text-xs text-gray-500 md:flex-row">

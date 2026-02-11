@@ -1,6 +1,5 @@
 "use client";
 
-import { CSButton } from "@/components/shared/cs_button";
 import { HomePortfolioModel } from "@/core/entities/home/home_portfolio_model";
 import Image from "next/image";
 import { useState } from "react";
@@ -34,16 +33,6 @@ export default function PortfolioCard({ item }: { item: HomePortfolioModel }) {
         <p className="mb-6 line-clamp-2 text-sm text-blue-100">
           {item.description ?? "No description available for this project."}
         </p>
-
-        <CSButton
-          variant="outline"
-          color="white"
-          size="small"
-          // href={`/portfolio/${item.id}`}
-          className="w-fit border-white/40 hover:border-white"
-        >
-          View Detail
-        </CSButton>
       </div>
     </div>
   );

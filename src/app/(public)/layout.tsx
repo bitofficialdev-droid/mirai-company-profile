@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import CWNavbar from "@/components/web/cw_navbar";
 import CWFooter from "@/components/web/cw_footer";
 
 const poppins = Poppins({
@@ -28,7 +27,6 @@ export const metadata: Metadata = {
   // ],
 
   authors: [{ name: "Mirai Softnet Technology" }],
-  // metadataBase: new URL("https://miraisoftnet.com"),
 };
 
 export default function RootLayout({
@@ -41,8 +39,6 @@ export default function RootLayout({
       <body
         className={`${poppins.className} flex min-h-screen flex-col antialiased`}
       >
-        <CWNavbar />
-
         <div className="h-25 w-full bg-[#0451bf]"></div>
 
         <main>{children}</main>

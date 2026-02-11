@@ -13,7 +13,7 @@ export default function RootPage() {
   return (
     <div className="flex w-full flex-col">
       {/* 1. HERO SECTION */}
-      <section className="relative flex min-h-[calc(100vh-100px)] w-full flex-col overflow-hidden bg-[#0451bf]">
+      <section className="relative flex w-full flex-col overflow-hidden bg-[#0451bf]">
         <div className="relative container mx-auto flex grow flex-col justify-center px-6 lg:px-28">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
             <div className="flex flex-col items-center justify-center gap-10 text-center lg:w-3/5 lg:items-start lg:text-left">
@@ -35,14 +35,14 @@ export default function RootPage() {
                 >
                   Get Started
                 </CSButton>
-                <CSButton
+                {/* <CSButton
                   variant="outline"
                   color="white"
                   size="wide"
                   className="font-semibold"
                 >
                   Our Services
-                </CSButton>
+                </CSButton> */}
               </div>
 
               <span className="hidden h-0.5 w-[75%] bg-[#7efc62] opacity-80 lg:block" />
@@ -64,14 +64,14 @@ export default function RootPage() {
               >
                 Get Started
               </CSButton>
-              <CSButton
+              {/* <CSButton
                 variant="outline"
                 color="white"
                 size="wide"
                 className="w-full"
               >
                 Our Services
-              </CSButton>
+              </CSButton> */}
             </div>
           </div>
         </div>
@@ -145,9 +145,6 @@ export default function RootPage() {
                 {data.portfolio?.description ?? "-"}
               </p>
             </div>
-            <CSButton variant="outline" color="primary">
-              See More
-            </CSButton>
           </div>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             {(data.portfolio?.portfolios ?? []).slice(0, 2).map((project) => (
