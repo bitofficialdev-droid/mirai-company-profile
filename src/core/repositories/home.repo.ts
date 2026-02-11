@@ -1,164 +1,14 @@
 import { HomeModel } from "../entities/home/home_model";
 
-// export const HomeRepository = {
-//   getHome: (): HomeModel => {
-//     return {
-//       hero: {
-//         title:
-//           "Kelola Administrasi HR & Payroll <span class='text-[#7efc62]'>Lebih Cepat & Akurat</span>",
-//         description:
-//           "Tinggalkan cara manual yang membuang waktu. Bit Hrms Web menghadirkan solusi manajemen SDM terintegrasi mulai dari absensi, penggajian, hingga pajak PPh 21 dalam satu platform cloud yang aman.",
-//       },
-//       trusted: [
-//         {
-//           label: "Bonecom Tricom",
-//           image:
-//             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_bt@4x-8.png",
-//         },
-//         {
-//           label: "Toyota Boshoku",
-//           image:
-//             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_tbina@4x-8.png",
-//         },
-//         {
-//           label: "Rajawali Mitra Pratama",
-//           image:
-//             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_rmp@4x-8.png",
-//         },
-//         {
-//           label: "Rajawali Inti Mandiri",
-//           image:
-//             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_rim@4x-8.png",
-//         },
-//         {
-//           label: "Bonecom Tricom Paintech",
-//           image:
-//             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_btp@4x-8.png",
-//         },
-//         {
-//           label: "Bonecom Tricom Paintech",
-//           image:
-//             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_btp@4x-8.png",
-//         },
-//       ],
-//       service: {
-//         title: "Fitur Unggulan Bit Hrms",
-//         description:
-//           "Dirancang untuk memenuhi kebutuhan kompleks perusahaan manufaktur, jasa, dan korporasi dengan antarmuka yang user-friendly.",
-//         services: [
-//           {
-//             title: "Payroll & Tax Otomatis",
-//             description:
-//               "Hitung gaji, lembur, BPJS, hingga PPh 21 secara otomatis dan presisi. Minimalkan human error dalam setiap periode penggajian.",
-//             url: "#",
-//           },
-//           {
-//             title: "Manajemen Absensi & Shift",
-//             description:
-//               "Pantau kehadiran karyawan secara real-time, kelola jadwal shift yang kompleks, dan integrasi mudah dengan mesin fingerprint atau mobile.",
-//             url: "#",
-//           },
-//           {
-//             title: "Database Karyawan Terpusat",
-//             description:
-//               "Simpan seluruh data karyawan, kontrak kerja, hingga riwayat karir dalam satu penyimpanan digital yang aman dan mudah diakses.",
-//             url: "#",
-//           },
-//         ],
-//       },
-//       partner: {
-//         title: "Ekosistem Terintegrasi",
-//         description:
-//           "Bit Hrms Web tidak berdiri sendiri. Kami mendukung integrasi dengan berbagai perangkat dan sistem untuk kelancaran operasional Anda.",
-//         sections: [
-//           "Integrasi Mesin Fingerprint",
-//           "Export Bank Transfer (Payroll)",
-//           "Laporan Pajak (e-SPT Support)",
-//         ],
-//       },
-//       stats: [
-//         {
-//           label: "Karyawan Terkelola",
-//           value: "10.000+",
-//         },
-//         {
-//           label: "Perusahaan Pengguna",
-//           value: "50+",
-//         },
-//         {
-//           label: "Tahun Pengalaman",
-//           value: "8+",
-//         },
-//         {
-//           label: "Akurasi Perhitungan",
-//           value: "99.9%",
-//         },
-//       ],
-//       portfolio: {
-//         title: "Solusi untuk Berbagai Industri",
-//         description:
-//           "Lihat bagaimana Bit Hrms membantu berbagai skala bisnis mengefisiensikan operasional HR mereka.",
-//         portfolios: [
-//           {
-//             id: "1",
-//             title: "Manufaktur & Pabrik",
-//             description:
-//               "Pengelolaan ribuan karyawan dengan sistem shift yang kompleks dan lembur otomatis.",
-//           },
-//           {
-//             id: "2",
-//             title: "Korporat & Jasa",
-//             description:
-//               "Sistem approval cuti berjenjang dan penilaian kinerja (KPI) yang transparan.",
-//           },
-//         ],
-//       },
-//       review: {
-//         title: "Apa Kata Klien Kami?",
-//         comments: [
-//           {
-//             id: "1",
-//             name: "Budi Santoso",
-//             job: "HR Manager",
-//             company: "PT Bonecom Tricom",
-//             comment:
-//               "Sejak menggunakan Bit Hrms, proses closing payroll yang biasanya butuh 5 hari kini selesai dalam 1 hari. Sangat membantu efisiensi tim HR.",
-//           },
-//           {
-//             id: "2",
-//             name: "Siti Aminah",
-//             job: "Finance Director",
-//             company: "Rajawali Group",
-//             comment:
-//               "Perhitungan pajak PPh 21 sangat akurat dan selalu update dengan regulasi terbaru. Laporan ke manajemen jadi lebih mudah.",
-//           },
-//           {
-//             id: "3",
-//             name: "Rahmat Hidayat",
-//             job: "Plant Manager",
-//             company: "Toyota Boshoku Indonesia",
-//             comment:
-//               "Monitoring absensi ribuan karyawan pabrik jadi jauh lebih transparan. Data lembur tercatat rapi dan mengurangi komplain karyawan.",
-//           },
-//         ],
-//       },
-//       contact: {
-//         title: "Siap Transformasi HR Anda?",
-//         description:
-//           "Jangan biarkan administrasi menghambat pertumbuhan bisnis. Konsultasikan kebutuhan Anda sekarang dan dapatkan demo gratis.",
-//       },
-//     };
-//   },
-// };
-
 export const HomeRepository = {
   getHome: (): HomeModel => {
     return {
       hero: {
         title:
-          "Kelola HR & Payroll <span class='text-[#7efc62]'>Tanpa Ribet</span>",
+          "Kelola Administrasi <span class='text-[#7efc62]'>Tanpa Ribet</span>",
         description:
           "Bit HRMS, Satu platform untuk semua kebutuhan HR. Pantau kinerja tim via Web Dashboard dan berikan kemudahan akses mandiri bagi karyawan lewat aplikasi Mobile.",
+        image: "/mockup.png",
       },
       trusted: [
         {
@@ -226,6 +76,7 @@ export const HomeRepository = {
           "Aplikasi Mobile untuk Seluruh Karyawan",
           "Keamanan Data Standar Perusahaan",
         ],
+        image: "/hr.jpg",
       },
       stats: [
         { label: "User Aktif", value: "10k+" },
@@ -243,12 +94,14 @@ export const HomeRepository = {
             title: "Optimasi Manufaktur",
             description:
               "Otomasi data ribuan karyawan dengan sistem shift dinamis.",
+            image: ["/factory.jpg"],
           },
           {
             id: "2",
             title: "Efisiensi Korporasi",
             description:
               "Penyederhanaan proses birokrasi dan approval melalui aplikasi.",
+            image: ["/corporate.jpg"],
           },
         ],
       },

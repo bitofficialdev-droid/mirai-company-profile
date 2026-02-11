@@ -16,10 +16,10 @@ export default function RootPage() {
       <section className="relative flex w-full flex-col overflow-hidden bg-[#0451bf]">
         <div className="relative container mx-auto flex grow flex-col justify-center px-6 lg:px-28">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
-            <div className="flex flex-col items-center justify-center gap-10 text-center lg:w-3/5 lg:items-start lg:text-left">
+            <div className="flex flex-col items-center justify-center gap-10 text-center lg:w-2/5 lg:items-start lg:text-left">
               <div className="max-w-4xl space-y-6">
                 <h1
-                  className="text-4xl leading-tight font-bold text-white md:text-6xl lg:text-7xl"
+                  className="text-4xl leading-tight font-bold text-white md:text-6xl lg:text-5xl"
                   dangerouslySetInnerHTML={{ __html: data.hero?.title ?? "-" }}
                 />
                 <p className="max-w-2xl text-base text-blue-100 opacity-90 md:text-xl">
@@ -48,11 +48,9 @@ export default function RootPage() {
               <span className="hidden h-0.5 w-[75%] bg-[#7efc62] opacity-80 lg:block" />
             </div>
 
-            <div className="flex justify-center lg:w-2/5">
-              <div className="relative h-64 w-64 md:h-110 md:w-110 lg:h-136 lg:w-137.5">
-                <div className="absolute inset-0 overflow-hidden rounded-3xl bg-white/5 shadow-2xl backdrop-blur-sm lg:rounded-b-3xl">
-                  <HeroImageSection heroData={data.hero} />
-                </div>
+            <div className="flex justify-center lg:w-3/5">
+              <div className="relative md:h-110 md:w-110 lg:h-136 lg:w-137.5">
+                <HeroImageSection heroData={data.hero} />
               </div>
             </div>
 

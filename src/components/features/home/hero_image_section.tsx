@@ -33,7 +33,7 @@ export default function HeroImageSection({
           fill
           priority
           onError={() => setIsError(true)}
-          className="object-cover opacity-80 mix-blend-luminosity contrast-125 grayscale transition-opacity duration-700"
+          className="object-contain transition-opacity duration-700"
         />
       ) : (
         <div className="flex h-full w-full flex-col items-center justify-center bg-linear-to-br from-[#0451bf]/20 to-transparent p-8 text-center">
