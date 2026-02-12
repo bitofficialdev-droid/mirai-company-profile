@@ -16,6 +16,7 @@ export interface CSButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElem
   size?: CSButtonSize;
   isLoading?: boolean;
   href?: string;
+  target?: string;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
 }
@@ -33,6 +34,7 @@ export const CSButton = React.forwardRef<HTMLButtonElement, CSButtonProps>(
       rightIcon,
       children,
       disabled,
+      target,
       ...props
     },
     ref,
@@ -120,7 +122,7 @@ export const CSButton = React.forwardRef<HTMLButtonElement, CSButtonProps>(
 
     if (href && !disabled) {
       return (
-        <Link href={href} className={buttonClasses}>
+        <Link href={href} className={buttonClasses} target={target}>
           {renderContent()}
         </Link>
       );

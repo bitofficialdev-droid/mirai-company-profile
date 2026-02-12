@@ -9,6 +9,7 @@ export const HomeRepository = {
         description:
           "Bit HRMS, Satu platform untuk semua kebutuhan HR. Pantau kinerja tim via Web Dashboard dan berikan kemudahan akses mandiri bagi karyawan lewat aplikasi Mobile.",
         image: "/mockup.png",
+        linkButton: "https://wa.me/6289646616188",
       },
       trusted: [
         {

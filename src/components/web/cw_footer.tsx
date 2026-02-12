@@ -4,7 +4,7 @@ export default function CWFooter() {
   return (
     <footer className="bg-[#021027] pt-24 pb-12 text-white">
       <div className="container mx-auto px-6 lg:px-28">
-        <div className="mb-24 grid grid-cols-1 gap-16 text-left md:grid-cols-4">
+        <div className="mb-24 grid grid-cols-1 gap-16 text-left md:grid-cols-3">
           <div className="col-span-1 space-y-6 md:col-span-1">
             <h4 className="text-2xl font-semibold text-[#7efc62]">
               Mirai Softnet Technology
@@ -13,23 +13,6 @@ export default function CWFooter() {
               Memberdayakan bisnis melalui teknologi inovatif dan solusi digital
               yang terukur untuk masa depan yang lebih baik.
             </p>
-          </div>
-          <div>
-            <h5 className="mb-8 text-xs font-bold tracking-widest text-gray-500 uppercase">
-              Explore
-            </h5>
-            <ul className="space-y-4">
-              <li key="contact-us">
-                <CSButton
-                  href=""
-                  variant="text"
-                  color="white"
-                  className="text-sm text-gray-400 transition-colors hover:text-[#7efc62]"
-                >
-                  Contact Us
-                </CSButton>
-              </li>
-            </ul>
           </div>
           <div>
             <h5 className="mb-8 text-xs font-bold tracking-widest text-gray-500 uppercase">

@@ -29,6 +29,9 @@ export default function RootPage() {
 
               <div className="hidden flex-row items-center gap-4 lg:flex">
                 <CSButton
+                  href={data.hero?.linkButton ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   size="wide"
                   color="secondary"
                   className="font-semibold text-[#0451bf]"
@@ -168,6 +171,9 @@ export default function RootPage() {
                 {data.contact?.description ?? "-"}
               </p>
               <CSButton
+                href={data.hero?.linkButton ?? "#"}
+                target="_blank"
+                rel="noopener noreferrer"
                 size="wide"
                 color="secondary"
                 className="font-bold text-[#0451bf] shadow-xl"
