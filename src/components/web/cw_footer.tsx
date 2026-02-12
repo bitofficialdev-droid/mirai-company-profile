@@ -6,7 +6,7 @@ export default function CWFooter() {
       <div className="container mx-auto px-6 lg:px-28">
         <div className="mb-24 grid grid-cols-1 gap-16 text-left md:grid-cols-4">
           <div className="col-span-1 space-y-6 md:col-span-1">
-            <h4 className="text-2xl font-bold text-[#7efc62]">
+            <h4 className="text-2xl font-semibold text-[#7efc62]">
               Mirai Softnet Technology
             </h4>
             <p className="text-sm leading-relaxed text-gray-400">
