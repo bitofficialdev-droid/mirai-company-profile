@@ -13,7 +13,7 @@ export default function ReviewSection({ reviewData }: ReviewSectionProps) {
   ];
 
   return (
-    <section className="overflow-hidden bg-[#f8fafc] py-24">
+    <section id="testimony" className="overflow-hidden bg-[#f8fafc] py-24">
       <div className="container mx-auto px-6 text-center lg:px-28">
         <h2 className="mb-16 text-3xl font-bold text-[#0451bf] md:text-5xl">
           {reviewData?.title ?? "What Our Clients Say"}

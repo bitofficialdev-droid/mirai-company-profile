@@ -31,6 +31,7 @@ export default function HeroImageSection({
           src={heroData.image ?? ""}
           alt={"Hero Image"}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
           onError={() => setIsError(true)}
           className="object-contain transition-opacity duration-700"

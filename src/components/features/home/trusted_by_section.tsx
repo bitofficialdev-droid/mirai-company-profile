@@ -18,6 +18,7 @@ function TrustedLogo({ item }: { item: HomeTrustedModel }) {
             src={item.image ?? ""}
             alt={item.label ?? "Partner Logo"}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-contain opacity-100 grayscale transition-all"
             onError={() => setIsError(true)}
           />

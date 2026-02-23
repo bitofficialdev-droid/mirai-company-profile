@@ -9,7 +9,7 @@ export const HomeRepository = {
         description:
           "Bit HRMS, Satu platform untuk semua kebutuhan HR. Pantau kinerja tim via Web Dashboard dan berikan kemudahan akses mandiri bagi karyawan lewat aplikasi Mobile.",
         image: "/mockup.png",
-        linkButton: "https://wa.me/6289646616188",
+        linkButton: "#contact",
       },
       trusted: [
         {
@@ -79,6 +79,10 @@ export const HomeRepository = {
         ],
         image: "/hr.jpg",
       },
+      feature: {
+        title: "Fitur Unggulan Bit Hrms",
+        //TODO: update image and label
+      },
       stats: [
         { label: "User Aktif", value: "10k+" },
         { label: "Perusahaan", value: "50+" },
@@ -135,10 +139,51 @@ export const HomeRepository = {
           },
         ],
       },
-      contact: {
-        title: "Mulai Transformasi Digital HR Anda",
+      faq: {
+        title: "Frequently Asked Questions",
         description:
-          "Gabung bersama puluhan perusahaan lainnya yang telah merasakan kemudahan mengelola SDM dengan Bit Hrms.",
+          "Temukan jawaban atas pertanyaan umum mengenai solusi HRMS kami untuk efisiensi bisnis Anda.",
+        faqs: [
+          {
+            question: "Apa itu Bit Hrms dan bagaimana cara kerjanya?",
+            answer:
+              "Bit Hrms adalah platform digital terintegrasi untuk mengelola seluruh administrasi SDM, mulai dari absensi online, perhitungan payroll otomatis, hingga manajemen cuti dan pajak (PPh 21). Sistem bekerja secara cloud, sehingga data tersinkronisasi secara real-time antara aplikasi mobile karyawan dan dasbor admin.",
+          },
+          {
+            question:
+              "Apakah data perusahaan dan karyawan terjamin keamanannya?",
+            answer:
+              "Keamanan data adalah prioritas kami. Kami menggunakan enkripsi tingkat tinggi (SSL), penyimpanan server yang aman, dan sistem backup berkala. Selain itu, Anda dapat mengatur hak akses (role-based access) sehingga data sensitif hanya bisa dilihat oleh pihak yang berwenang.",
+          },
+          {
+            question:
+              "Bagaimana jika sistem penggajian kami memiliki aturan lembur yang kompleks?",
+            answer:
+              "Sistem kami sangat fleksibel. Anda dapat melakukan kustomisasi formula lembur, tunjangan, hingga potongan sesuai dengan peraturan perusahaan atau kebijakan UU Ketenagakerjaan yang berlaku di Indonesia.",
+          },
+          {
+            question:
+              "Apakah karyawan bisa melakukan absensi tanpa menggunakan mesin fingerprint?",
+            answer:
+              "Ya, sistem kami mendukung absensi mobile berbasis GPS dan Face Recognition. Karyawan dapat melakukan absen langsung dari smartphone mereka dengan batasan lokasi (geofencing) yang telah ditentukan oleh perusahaan.",
+          },
+          {
+            question:
+              "Berapa lama waktu yang dibutuhkan untuk implementasi sistem ini?",
+            answer:
+              "Waktu implementasi sangat bergantung pada jumlah data karyawan, namun rata-rata mitra kami dapat melakukan onboarding penuh dalam waktu 3 hingga 7 hari kerja dengan bantuan tim support kami.",
+          },
+        ],
+      },
+      contact: {
+        title: "Demo Gratis & Konsultasi Solusi HRMS Terbaik",
+        address1: "Vasanta Innopark No T-51",
+        address2: "Jl. Kalimantan, Kab. Bekasi",
+        call1: "+62 21 50 666 222",
+        call2: " +62 811 8886 2020",
+        email1: "info@miraisoftnet.com",
+        openHours1: "Senin - Jumat",
+        openHours2: "07.15 - 16.00 WIB",
       },
     };
   },

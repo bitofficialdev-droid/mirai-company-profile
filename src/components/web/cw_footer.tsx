@@ -1,46 +1,90 @@
-import { CSButton } from "../shared/cs_button";
+import Link from "next/link";
+import Image from "next/image";
+import { FooterRepository } from "@/core/repositories/footer.repo";
 
 export default function CWFooter() {
+  const data = FooterRepository.getFooter();
+  const linkClass =
+    "text-[#4cd0c3] hover:text-white transition-colors text-[13px] mb-3 block";
+  const headerClass = "text-white text-base font-medium mb-6";
+
   return (
-    <footer className="bg-[#021027] pt-24 pb-12 text-white">
-      <div className="container mx-auto px-6 lg:px-28">
-        <div className="mb-24 grid grid-cols-1 gap-16 text-left md:grid-cols-3">
-          <div className="col-span-1 space-y-6 md:col-span-1">
-            <h4 className="text-2xl font-semibold text-[#7efc62]">
-              Mirai Softnet Technology
-            </h4>
-            <p className="text-sm leading-relaxed text-gray-400">
-              Memberdayakan bisnis melalui teknologi inovatif dan solusi digital
-              yang terukur untuk masa depan yang lebih baik.
+    <footer className="bg-[#021027] pt-16 pb-16 text-white">
+      <div className="container mx-auto px-6 lg:px-16">
+        <div className="grid grid-cols-1 gap-8 text-left md:grid-cols-2 lg:grid-cols-5">
+          <div className="lg:col-span-1 lg:pr-6">
+            <Link
+              href="/"
+              className="flex items-center transition-transform active:scale-95"
+            >
+              <div className="relative h-12.75 w-16">
+                <Image
+                  src="/icon-white-no-bg.png"
+                  alt="Mirai Softnet Technology Logo"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  className="object-contain object-left"
+                />
+              </div>
+              <div className="text-2xl font-medium">hrms</div>
+            </Link>
+
+            <p className="mt-6 text-[13px] leading-relaxed text-gray-300">
+              {data.leading?.desctiption ?? "-"}
             </p>
+
+            <div className="mt-6 grid w-max grid-cols-3 gap-3">
+              {data.leading?.socialMedia?.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.url ?? "#"}
+                  aria-label={social.label}
+                  className="hover:bg-opacity-80 flex h-10 w-10 items-center justify-center rounded-full bg-[#0451bf] text-white transition"
+                >
+                  {social.image}
+                </Link>
+              ))}
+            </div>
           </div>
+
           <div>
-            <h5 className="mb-8 text-xs font-bold tracking-widest text-gray-500 uppercase">
-              Office
-            </h5>
-            <p className="text-sm leading-relaxed text-gray-400">
-              Vasanta Innopark No T-51,
-              <br />
-              Jl. Kalimantan, Gandamekar, Kec.Cikarang Barat, Kabupaten Bekasi,
-              Jawa Barat 17530, Indonesia.
-            </p>
+            <h4 className={headerClass}>Solusi & Fitur</h4>
+            {data.features?.slice(0, 11).map((feature, index) => (
+              <Link key={index} href={feature.url ?? "#"} className={linkClass}>
+                {feature.label}
+              </Link>
+            ))}
           </div>
+
+          <div className="lg:pt-12">
+            {data.features?.slice(11).map((feature, index) => (
+              <Link key={index} href={feature.url ?? "#"} className={linkClass}>
+                {feature.label}
+              </Link>
+            ))}
+          </div>
+
           <div>
-            <h5 className="mb-8 text-xs font-bold tracking-widest text-gray-500 uppercase">
-              Email
-            </h5>
-            <p className="mb-4 text-xs text-gray-400">info@miraisoftnet.com</p>
+            <h4 className={headerClass}>Resource</h4>
+            {data.resources?.map((resource, index) => (
+              <Link
+                key={index}
+                href={resource.url ?? "#"}
+                className={linkClass}
+              >
+                {resource.label}
+              </Link>
+            ))}
           </div>
-        </div>
-        <div className="flex flex-col items-center justify-between gap-6 border-t border-white/5 pt-12 text-xs text-gray-500 md:flex-row">
-          <p>© 2025 Mirai Softnet Technology. All Rights Reserved.</p>
-          <div className="flex gap-8">
-            <a href="#" className="transition-colors hover:text-white">
-              Privacy Policy
-            </a>
-            <a href="#" className="transition-colors hover:text-white">
-              Terms of Service
-            </a>
+
+          <div>
+            <h4 className={headerClass}>Tentang Kami</h4>
+            {data.about?.map((about, index) => (
+              <Link key={index} href={about.url ?? "#"} className={linkClass}>
+                {about.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

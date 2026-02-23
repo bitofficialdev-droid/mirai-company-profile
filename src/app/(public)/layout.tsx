@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import CWFooter from "@/components/web/cw_footer";
+import CWNavbar from "@/components/web/cw_navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,20 +12,33 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mirai Softnet Technology",
-    template: "%s | Mirai Softnet Technology",
+    default: "Bit Hrms",
+    template: "%s | Bit Hrms",
   },
   description:
-    "Your reliable IT partner delivering innovative, secure, and scalable digital solutions for modern businesses.",
+    "Bit HRMS is a comprehensive Human Resource Management System designed to streamline and automate HR processes, including employee management, payroll, recruitment, performance management, and more. Our cloud-based solution offers a user-friendly interface and powerful features to help businesses of all sizes manage their workforce efficiently and effectively.",
 
-  // TODO: change this!
-  // keywords: [
-  //   "IT Solution",
-  //   "Software Development",
-  //   "Digital Transformation",
-  //   "Technology Partner",
-  //   "Mirai Softnet Technology",
-  // ],
+  keywords: [
+    "IT solutions",
+    "HRMS software",
+    "Bit",
+    "Bit HRMS",
+    "Bit hrms",
+    "Human Resource Management System",
+    "HR software",
+    "Employee management",
+    "Payroll software",
+    "Recruitment software",
+    "Performance management",
+    "Time and attendance tracking",
+    "Leave management",
+    "Employee self-service portal",
+    "HR analytics",
+    "Cloud-based HRMS",
+    "On-premises HRMS",
+    "HRMS implementation",
+    "HRMS support",
+  ],
 
   authors: [{ name: "Mirai Softnet Technology" }],
 };
@@ -35,13 +49,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${poppins.className} flex min-h-screen flex-col antialiased`}
       >
-        <div className="h-25 w-full bg-[#0451bf]"></div>
+        <CWNavbar />
 
-        <main>{children}</main>
+        {/* <div className="h-40 w-full bg-[#0451bf]"></div> */}
+
+        <main className="flex grow">{children}</main>
 
         <CWFooter />
       </body>

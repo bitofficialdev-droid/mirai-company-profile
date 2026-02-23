@@ -13,3 +13,7 @@ html {
     scrollbar-width: none;
   }
 }
+
+[id] {
+  scroll-margin-top: 99px;
+}

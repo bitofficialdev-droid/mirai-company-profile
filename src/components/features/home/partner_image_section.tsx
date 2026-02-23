@@ -34,6 +34,7 @@ export default function PartnerImageSection({
           src={image ?? ""}
           alt={title ?? "Partner Image"}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover opacity-90 transition-all duration-700 group-hover:scale-105"
           onError={() => setIsError(true)}
         />
