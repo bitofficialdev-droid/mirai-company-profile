@@ -16,7 +16,7 @@ export default function CWNavbar() {
   ];
 
   return (
-    <nav className="fixed top-0 z-20 w-full bg-[#0451bf] text-white shadow-2xl shadow-[#0451bf]/50">
+    <nav className="fixed top-0 z-30 w-full bg-[#0451bf] text-white shadow-2xl shadow-[#0451bf]/50">
       <div className="container mx-auto px-6 py-6 lg:px-28">
         <div className="flex items-center justify-start gap-10">
           {/* Logo */}
