@@ -1,4 +1,5 @@
 export interface HomeFeatureItemModel {
-  lable?: string;
+  id: number;
+  label?: string;
   image?: string;
 }

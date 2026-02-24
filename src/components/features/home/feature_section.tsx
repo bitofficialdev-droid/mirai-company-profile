@@ -13,90 +13,19 @@ export default function FeatureSection({
   const [activeWebIndex, setActiveWebIndex] = useState(0);
   const [activeMobileIndex, setActiveMobileIndex] = useState(0);
 
-  const webData = [
-    {
-      id: 1,
-      title: "Lorem Ipsum Web 1",
-      desc: "Dolor sit amet, consectetur adipiscing elit.",
-      img: "https://picsum.photos/seed/web1/800/450",
-    },
-    {
-      id: 2,
-      title: "Consectetur Web 2",
-      desc: "Quis nostrud exercitation ullamco.",
-      img: "https://picsum.photos/seed/web2/800/450",
-    },
-    {
-      id: 3,
-      title: "Sed Do Eiusmod 3",
-      desc: "Velit esse cillum dolore eu fugiat nulla.",
-      img: "https://picsum.photos/seed/web3/800/450",
-    },
-    {
-      id: 4,
-      title: "Tempor Incididunt 4",
-      desc: "Excepteur sint occaecat cupidatat non.",
-      img: "https://picsum.photos/seed/web4/800/450",
-    },
-    {
-      id: 5,
-      title: "Magna Aliqua 5",
-      desc: "Sunt in culpa qui officia deserunt mollit.",
-      img: "https://picsum.photos/seed/web5/800/450",
-    },
-  ];
-
-  const mobileData = [
-    {
-      id: 1,
-      title: "Mobile UI 1",
-      desc: "Nemo enim ipsam voluptatem quia voluptas.",
-      img: "https://picsum.photos/seed/mob1/400/800",
-    },
-    {
-      id: 2,
-      title: "Mobile UI 2",
-      desc: "Neque porro quisquam est, qui dolorem.",
-      img: "https://picsum.photos/seed/mob2/400/800",
-    },
-    {
-      id: 3,
-      title: "Mobile UI 3",
-      desc: "Itaque earum rerum hic tenetur a sapiente.",
-      img: "https://picsum.photos/seed/mob3/400/800",
-    },
-    {
-      id: 4,
-      title: "Mobile UI 4",
-      desc: "At vero eos et accusamus et iusto odio.",
-      img: "https://picsum.photos/seed/mob4/400/800",
-    },
-    {
-      id: 5,
-      title: "Mobile UI 5",
-      desc: "Ducimus qui blanditiis praesentium.",
-      img: "https://picsum.photos/seed/mob5/400/800",
-    },
-  ];
-
-  // Fungsi untuk menghitung pergeseran track agar item aktif selalu di tengah
-  // 100 / jumlah_item_tampilan adalah basisnya
   const getTrackTransform = (activeIndex: number, itemWidthPercent: number) => {
-    // Kita geser track berdasarkan index aktif dikali lebar item
     return `translateX(calc(50% - (${activeIndex} * ${itemWidthPercent}%) - (${itemWidthPercent}% / 2)))`;
   };
 
   return (
     <section id="features" className="overflow-hidden bg-[#f8fafc] py-24">
       <div className="container mx-auto">
-        {/* Header */}
         <div className="mb-12 px-6 text-center">
           <h2 className="mb-4 text-3xl font-bold text-[#0451bf] md:text-5xl">
             {feature?.title ?? "Fitur Unggulan Kami"}
           </h2>
         </div>
 
-        {/* Tab Switcher */}
         <div className="relative z-20 mx-auto mb-16 flex w-fit items-center justify-center rounded-full border border-gray-100 bg-white p-2 shadow-sm">
           {["Web", "Mobile"].map((tab) => (
             <button
@@ -113,53 +42,45 @@ export default function FeatureSection({
           ))}
         </div>
 
-        {/* Carousel Area */}
         <div className="relative min-h-125 w-full">
-          {/* WEB SLIDER */}
           <div
-            className={`transition-all duration-700 ${activeTab === "Web" ? "translate-y-0 opacity-100" : "pointer-events-none absolute inset-0 translate-y-10 opacity-0"}`}
+            className={`transition-all duration-300 ${activeTab === "Web" ? "translate-y-0 opacity-100" : "pointer-events-none absolute inset-0 translate-y-10 opacity-0"}`}
           >
-            <div className="mb-10 h-20 px-6 text-center">
-              <h3 className="text-2xl font-bold text-gray-800">
-                {webData[activeWebIndex].title}
-              </h3>
+            <div className="mb-8 px-6 text-center">
               <p className="mx-auto max-w-2xl text-gray-500">
-                {webData[activeWebIndex].desc}
+                {feature?.dekstop?.[activeWebIndex]?.label ?? "-"}
               </p>
             </div>
-
             <div className="relative w-full overflow-visible">
               <div
                 className="flex transition-transform duration-500 ease-out will-change-transform"
-                style={{ transform: getTrackTransform(activeWebIndex, 60) }} // 60% adalah lebar card web
+                style={{ transform: getTrackTransform(activeWebIndex, 50) }}
               >
-                {webData.map((item, index) => (
+                {feature?.dekstop?.map((item, index) => (
                   <div
                     key={item.id}
                     onClick={() => setActiveWebIndex(index)}
                     className={`relative shrink-0 px-4 transition-all duration-500 ease-out ${index === activeWebIndex ? "z-10 scale-110" : "scale-100 opacity-50 blur-[1px]"}`}
-                    style={{ width: "60%" }}
+                    style={{ width: "50%" }}
                   >
                     <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-white shadow-2xl">
                       <div
                         className={`absolute inset-0 z-10 rounded-2xl border-4 transition-colors duration-500 ${index === activeWebIndex ? "border-[#0451bf]" : "border-transparent"}`}
                       />
                       <Image
-                        src={item.img}
-                        alt={item.title}
+                        src={item.image ?? "-"}
+                        alt={item.label ?? "-"}
                         fill
                         className="object-cover"
-                        sizes="60vw"
+                        sizes="50vw"
                       />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-
-            {/* Dots Web */}
-            <div className="mt-16 flex justify-center gap-2">
-              {webData.map((_, i) => (
+            <div className="mt-12 flex justify-center gap-2">
+              {feature?.dekstop?.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveWebIndex(i)}
@@ -169,51 +90,44 @@ export default function FeatureSection({
             </div>
           </div>
 
-          {/* MOBILE SLIDER */}
           <div
-            className={`transition-all duration-700 ${activeTab === "Mobile" ? "translate-y-0 opacity-100" : "pointer-events-none absolute inset-0 translate-y-10 opacity-0"}`}
+            className={`transition-all duration-300 ${activeTab === "Mobile" ? "translate-y-0 opacity-100" : "pointer-events-none absolute inset-0 translate-y-10 opacity-0"}`}
           >
-            <div className="mb-10 h-20 px-6 text-center">
-              <h3 className="text-2xl font-bold text-gray-800">
-                {mobileData[activeMobileIndex].title}
-              </h3>
+            <div className="mb-8 px-6 text-center">
               <p className="mx-auto max-w-2xl text-gray-500">
-                {mobileData[activeMobileIndex].desc}
+                {feature?.mobile?.[activeMobileIndex]?.label ?? "-"}
               </p>
             </div>
-
             <div className="relative w-full overflow-visible">
               <div
                 className="flex transition-transform duration-500 ease-out will-change-transform"
-                style={{ transform: getTrackTransform(activeMobileIndex, 40) }} // 40% lebar card mobile
+                style={{ transform: getTrackTransform(activeMobileIndex, 20) }}
               >
-                {mobileData.map((item, index) => (
+                {feature?.mobile?.map((item, index) => (
                   <div
                     key={item.id}
                     onClick={() => setActiveMobileIndex(index)}
-                    className={`relative shrink-0 px-3 transition-all duration-500 ease-out ${index === activeMobileIndex ? "z-10 scale-110" : "scale-100 opacity-50 blur-[1px]"}`}
-                    style={{ width: "40%" }}
+                    className={`relative shrink-0 px-2 transition-all duration-500 ease-out ${index === activeMobileIndex ? "z-10 scale-110" : "scale-100 opacity-50 blur-[1px]"}`}
+                    style={{ width: "20%" }}
                   >
-                    <div className="relative aspect-9/18 w-full overflow-hidden rounded-[2.5rem] bg-white shadow-2xl">
+                    <div className="relative aspect-9/18 w-full overflow-hidden rounded-4xl bg-white shadow-2xl">
                       <div
-                        className={`absolute inset-0 z-10 rounded-[2.5rem] border-4 transition-colors duration-500 ${index === activeMobileIndex ? "border-[#0451bf]" : "border-transparent"}`}
+                        className={`absolute inset-0 z-10 rounded-4xl border-[3px] transition-colors duration-500 ${index === activeMobileIndex ? "border-[#0451bf]" : "border-transparent"}`}
                       />
                       <Image
-                        src={item.img}
-                        alt={item.title}
+                        src={item.image ?? "-"}
+                        alt={item.label ?? "-"}
                         fill
                         className="object-cover"
-                        sizes="40vw"
+                        sizes="20vw"
                       />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-
-            {/* Dots Mobile */}
-            <div className="mt-20 flex justify-center gap-2">
-              {mobileData.map((_, i) => (
+            <div className="mt-12 flex justify-center gap-2">
+              {feature?.mobile?.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveMobileIndex(i)}

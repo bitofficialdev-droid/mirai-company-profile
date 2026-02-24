@@ -81,7 +81,60 @@ export const HomeRepository = {
       },
       feature: {
         title: "Fitur Unggulan Bit Hrms",
-        //TODO: update image and label
+        dekstop: [
+          {
+            id: 1,
+            label: "Dolor sit amet, consectetur.",
+            image: "https://picsum.photos/seed/web1/800/450",
+          },
+          {
+            id: 2,
+            label: "Quis nostrud exercitation.",
+            image: "https://picsum.photos/seed/web2/800/450",
+          },
+          {
+            id: 3,
+            label: "Velit esse cillum dolore.",
+            image: "https://picsum.photos/seed/web3/800/450",
+          },
+          {
+            id: 4,
+            label: "Excepteur sint occaecat.",
+            image: "https://picsum.photos/seed/web4/800/450",
+          },
+          {
+            id: 5,
+            label: "Sunt in culpa qui officia.",
+            image: "https://picsum.photos/seed/web5/800/450",
+          },
+        ],
+        mobile: [
+          {
+            id: 1,
+            label: "Nemo enim ipsam voluptatem.",
+            image: "https://picsum.photos/seed/mob1/400/800",
+          },
+          {
+            id: 2,
+            label: "Neque porro quisquam est.",
+            image: "https://picsum.photos/seed/mob2/400/800",
+          },
+          {
+            id: 3,
+            label: "Itaque earum rerum hic.",
+            image: "https://picsum.photos/seed/mob3/400/800",
+          },
+          {
+            id: 4,
+            label: "At vero eos et accusamus.",
+            image: "https://picsum.photos/seed/mob4/400/800",
+          },
+          {
+            id: 5,
+            label: "Ducimus qui blanditiis.",
+            image: "https://picsum.photos/seed/mob5/400/800",
+          },
+        ],
       },
       stats: [
         { label: "User Aktif", value: "10k+" },
