@@ -56,7 +56,9 @@ export default function CWNavbar() {
           {/* Dekstop Menu */}
           <div className="hidden items-center gap-14 lg:flex">
             <CSButton
-              href="#contact"
+              href="https://wa.me/6285218026895"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="solid"
               color="secondary"
               className="shrink-0 text-[18px] font-medium text-[#0451bf] shadow-lg shadow-[#7efc62]/20 hover:bg-[#7efc62] hover:text-[#0451bf]"

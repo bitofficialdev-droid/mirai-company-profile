@@ -29,10 +29,11 @@ export default function HeroImageSection({
       {hasImage ? (
         <Image
           src={heroData.image ?? ""}
-          alt={"Hero Image"}
+          alt="Hero Image"
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           priority
+          quality={100}
           onError={() => setIsError(true)}
           className="object-contain transition-opacity duration-700"
         />

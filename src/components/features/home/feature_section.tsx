@@ -46,7 +46,7 @@ export default function FeatureSection({
           <div
             className={`transition-all duration-300 ${activeTab === "Web" ? "translate-y-0 opacity-100" : "pointer-events-none absolute inset-0 translate-y-10 opacity-0"}`}
           >
-            <div className="mb-8 px-6 text-center">
+            <div className="mb-8 pb-6 text-center">
               <p className="mx-auto max-w-2xl text-gray-500">
                 {feature?.dekstop?.[activeWebIndex]?.label ?? "-"}
               </p>
@@ -71,7 +71,7 @@ export default function FeatureSection({
                         src={item.image ?? "-"}
                         alt={item.label ?? "-"}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         sizes="50vw"
                       />
                     </div>
@@ -93,7 +93,7 @@ export default function FeatureSection({
           <div
             className={`transition-all duration-300 ${activeTab === "Mobile" ? "translate-y-0 opacity-100" : "pointer-events-none absolute inset-0 translate-y-10 opacity-0"}`}
           >
-            <div className="mb-8 px-6 text-center">
+            <div className="mb-8 pb-6 text-center">
               <p className="mx-auto max-w-2xl text-gray-500">
                 {feature?.mobile?.[activeMobileIndex]?.label ?? "-"}
               </p>
@@ -110,7 +110,7 @@ export default function FeatureSection({
                     className={`relative shrink-0 px-2 transition-all duration-500 ease-out ${index === activeMobileIndex ? "z-10 scale-110" : "scale-100 opacity-50 blur-[1px]"}`}
                     style={{ width: "20%" }}
                   >
-                    <div className="relative aspect-9/18 w-full overflow-hidden rounded-4xl bg-white shadow-2xl">
+                    <div className="relative aspect-7/16 w-full overflow-hidden rounded-4xl bg-white shadow-2xl">
                       <div
                         className={`absolute inset-0 z-10 rounded-4xl border-[3px] transition-colors duration-500 ${index === activeMobileIndex ? "border-[#0451bf]" : "border-transparent"}`}
                       />

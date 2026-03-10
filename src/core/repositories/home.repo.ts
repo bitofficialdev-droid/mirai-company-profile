@@ -8,7 +8,7 @@ export const HomeRepository = {
           "Kelola Administrasi <span class='text-[#7efc62]'>Tanpa Ribet</span>",
         description:
           "Bit HRMS, Satu platform untuk semua kebutuhan HR. Pantau kinerja tim via Web Dashboard dan berikan kemudahan akses mandiri bagi karyawan lewat aplikasi Mobile.",
-        image: "/mockup.png",
+        image: "/mockup-hero.png",
         linkButton: "#contact",
       },
       trusted: [
@@ -17,11 +17,11 @@ export const HomeRepository = {
           image:
             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_bt@4x-8.png",
         },
-        {
-          label: "Toyota Boshoku",
-          image:
-            "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_tbina@4x-8.png",
-        },
+        // {
+        //   label: "Toyota Boshoku",
+        //   image:
+        //     "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_tbina@4x-8.png",
+        // },
         {
           label: "Rajawali Mitra Pratama",
           image:
@@ -80,67 +80,75 @@ export const HomeRepository = {
         image: "/hr.jpg",
       },
       feature: {
-        title: "Fitur Unggulan Bit Hrms",
+        title: "Fitur Bit Hrms",
         dekstop: [
           {
             id: 1,
-            label: "Dolor sit amet, consectetur.",
-            image: "https://picsum.photos/seed/web1/800/450",
-          },
-          {
-            id: 2,
-            label: "Quis nostrud exercitation.",
-            image: "https://picsum.photos/seed/web2/800/450",
-          },
-          {
-            id: 3,
-            label: "Velit esse cillum dolore.",
-            image: "https://picsum.photos/seed/web3/800/450",
-          },
-          {
-            id: 4,
-            label: "Excepteur sint occaecat.",
-            image: "https://picsum.photos/seed/web4/800/450",
-          },
-          {
-            id: 5,
-            label: "Sunt in culpa qui officia.",
-            image: "https://picsum.photos/seed/web5/800/450",
+            label: "Dashboard: Visualisasi Kehadiran & Analisis Tren Performa.",
+            image: "/ss-dekstop-dashboard.jpeg",
           },
         ],
         mobile: [
           {
             id: 1,
-            label: "Nemo enim ipsam voluptatem.",
-            image: "https://picsum.photos/seed/mob1/400/800",
+            label:
+              "Dashboard: Integrasi Layanan Mandiri Karyawan dalam Satu Dashboard.",
+            image: "/ss-mobile-dashboard.png",
           },
           {
             id: 2,
-            label: "Neque porro quisquam est.",
-            image: "https://picsum.photos/seed/mob2/400/800",
+            label: "Halaman Pengajuan: Kelola Pengajuan Tanpa Hambatan.",
+            image: "/ss-mobile-request.png",
           },
           {
             id: 3,
-            label: "Itaque earum rerum hic.",
-            image: "https://picsum.photos/seed/mob3/400/800",
+            label: "Absensi: Kehadiran Tepat Titik, Tepat Waktu.",
+            image: "/ss-mobile-loc.png",
           },
           {
             id: 4,
-            label: "At vero eos et accusamus.",
-            image: "https://picsum.photos/seed/mob4/400/800",
+            label:
+              "Face Recognition: Verifikasi Wajah untuk Akurasi Kehadiran Maksimal.",
+            image: "/ss-mobile-face.png",
           },
           {
             id: 5,
-            label: "Ducimus qui blanditiis.",
-            image: "https://picsum.photos/seed/mob5/400/800",
+            label: "Pengumuman: Saluran Komunikasi Resmi Perusahaan.",
+            image: "/ss-mobile-info.png",
+          },
+          {
+            id: 6,
+            label: "Profile: Pusat Informasi Pengguna & Pengaturan Akun.",
+            image: "/ss-mobile-profile.png",
+          },
+          {
+            id: 7,
+            label: "Jadwal Kerja: Cek Jadwal & Hari Libur Jadi Lebih Mudah.",
+            image: "/ss-mobile-schedule.png",
+          },
+          {
+            id: 8,
+            label: "Riwayat Absensi: Pantau Kehadiran & Kendali Data Presensi.",
+            image: "/ss-mobile-attendance.png",
+          },
+          {
+            id: 9,
+            label: "Approval (Atasan): Kelola Tim Lebih Cepat & Terorganisir.",
+            image: "/ss-mobile-app.png",
+          },
+          {
+            id: 10,
+            label:
+              " Tim Saya (Atasan): Pantau Produktivitas Tim secara Real-Time.",
+            image: "/ss-mobile-team.png",
           },
         ],
       },
       stats: [
-        { label: "User Aktif", value: "10k+" },
-        { label: "Perusahaan", value: "50+" },
+        { label: "User Aktif", value: "1k+" },
+        { label: "Perusahaan", value: "10+" },
         { label: "Proses Payroll", value: "100%" },
-        { label: "Hemat Waktu", value: "85%" },
+        { label: "Hemat Waktu", value: "35%" },
       ],
       portfolio: {
         title: "Telah Dipercaya Berbagai Sektor",
@@ -184,11 +192,19 @@ export const HomeRepository = {
           },
           {
             id: "3",
-            name: "Budi Pratama",
+            name: "Budi Santoso",
             job: "Operations Manager",
-            company: "Toyota Boshoku",
+            company: "Rajawali Mitra Pratama",
             comment:
-              "Sistem approval lewat web bikin kerjaan gak terhambat birokrasi lama. Semuanya jadi serba cepat.",
+              "Sistem absensinya sangat real-time. Memudahkan kami memantau kedisiplinan karyawan di berbagai lokasi cabang secara akurat.",
+          },
+          {
+            id: "4",
+            name: "Siti Aminah",
+            job: "General Manager",
+            company: "Rajawali Inti Mandiri",
+            comment:
+              "Fitur pelaporan di Bit HRMS sangat lengkap dan mudah ditarik datanya. Keputusan strategis terkait SDM kini bisa diambil lebih cepat.",
           },
         ],
       },
