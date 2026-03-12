@@ -185,7 +185,7 @@ export default function RootPage() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0451bf]/10 text-[#0451bf]">
                     <Icon icon="ph:map-pin-bold" className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-[#0451bf]">
+                  <h3 className="mb-2 text-lg font-semibold text-[#0451bf]">
                     Address
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-600">
@@ -199,7 +199,7 @@ export default function RootPage() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0451bf]/10 text-[#0451bf]">
                     <Icon icon="ph:phone-call-bold" className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-[#0451bf]">
+                  <h3 className="mb-2 text-lg font-semibold text-[#0451bf]">
                     Call Us
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-600">
@@ -213,7 +213,7 @@ export default function RootPage() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0451bf]/10 text-[#0451bf]">
                     <Icon icon="ph:envelope-simple-bold" className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-[#0451bf]">
+                  <h3 className="mb-2 text-lg font-semibold text-[#0451bf]">
                     Email Us
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-600">
@@ -227,7 +227,7 @@ export default function RootPage() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0451bf]/10 text-[#0451bf]">
                     <Icon icon="ph:clock-bold" className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-[#0451bf]">
+                  <h3 className="mb-2 text-lg font-semibold text-[#0451bf]">
                     Open Hours
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-600">

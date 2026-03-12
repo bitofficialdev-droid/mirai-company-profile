@@ -17,11 +17,6 @@ export const HomeRepository = {
           image:
             "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_bt@4x-8.png",
         },
-        // {
-        //   label: "Toyota Boshoku",
-        //   image:
-        //     "https://miraisoftnet.com/dev/wp-content/uploads/2025/11/cust_tbina@4x-8.png",
-        // },
         {
           label: "Rajawali Mitra Pratama",
           image:
@@ -105,12 +100,12 @@ export const HomeRepository = {
             label: "Absensi: Kehadiran Tepat Titik, Tepat Waktu.",
             image: "/ss-mobile-loc.png",
           },
-          {
-            id: 4,
-            label:
-              "Face Recognition: Verifikasi Wajah untuk Akurasi Kehadiran Maksimal.",
-            image: "/ss-mobile-face.png",
-          },
+          // {
+          //   id: 4,
+          //   label:
+          //     "Face Recognition: Verifikasi Wajah untuk Akurasi Kehadiran Maksimal.",
+          //   image: "/ss-mobile-face.png",
+          // },
           {
             id: 5,
             label: "Pengumuman: Saluran Komunikasi Resmi Perusahaan.",
@@ -245,7 +240,7 @@ export const HomeRepository = {
         ],
       },
       contact: {
-        title: "Demo Gratis & Konsultasi Solusi HRMS Terbaik",
+        title: "Konsultasi Solusi HRMS Terbaik",
         address1: "Vasanta Innopark No T-51",
         address2: "Jl. Kalimantan, Kab. Bekasi",
         call1: "+62 21 50 666 222",

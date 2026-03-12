@@ -50,7 +50,7 @@ export default function CWFooter() {
 
           <div>
             <h4 className={headerClass}>Solusi & Fitur</h4>
-            {data.features?.slice(0, 11).map((feature, index) => (
+            {data.features?.slice(0, 10).map((feature, index) => (
               <Link key={index} href={feature.url ?? "#"} className={linkClass}>
                 {feature.label}
               </Link>
@@ -58,7 +58,7 @@ export default function CWFooter() {
           </div>
 
           <div className="lg:pt-12">
-            {data.features?.slice(11).map((feature, index) => (
+            {data.features?.slice(10).map((feature, index) => (
               <Link key={index} href={feature.url ?? "#"} className={linkClass}>
                 {feature.label}
               </Link>
@@ -66,7 +66,7 @@ export default function CWFooter() {
           </div>
 
           <div>
-            <h4 className={headerClass}>Resource</h4>
+            <h4 className={headerClass}>Biaya</h4>
             {data.resources?.map((resource, index) => (
               <Link
                 key={index}

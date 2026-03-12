@@ -1,6 +1,7 @@
 "use client";
 
 import { sendEmail } from "@/actions/contact";
+import { CSButton } from "@/components/shared/cs_button";
 import { useState } from "react";
 
 export default function FormSection() {
@@ -59,17 +60,14 @@ export default function FormSection() {
       ></textarea>
 
       <div className="mt-2 text-center lg:text-left">
-        <button
+        <CSButton
           type="submit"
-          disabled={isPending}
-          className={`inline-flex w-fit items-center justify-center rounded-full px-8 py-3 font-bold text-white shadow-lg transition-all active:scale-95 ${
-            isPending
-              ? "bg-gray-400"
-              : "bg-[#0451bf] shadow-[#0451bf]/20 hover:scale-105"
-          }`}
+          variant="solid"
+          color="primary"
+          isLoading={isPending}
         >
           {isPending ? "Sending..." : "Send Message"}
-        </button>
+        </CSButton>
 
         {status === "success" && (
           <p className="mt-4 text-sm font-normal text-green-600">
