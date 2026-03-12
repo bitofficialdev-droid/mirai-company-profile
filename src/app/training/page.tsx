@@ -98,7 +98,7 @@ export default async function TrainingPage() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
             {data.whyUs.items.map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0451bf] text-[#7efc62]">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0451bf] text-white">
                   <span className="text-2xl font-bold">{idx + 1}</span>
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-[#0451bf]">
@@ -127,7 +127,7 @@ export default async function TrainingPage() {
                   href={data.cta.buttonLink}
                   color="secondary"
                   size="wide"
-                  className="font-bold text-[#0451bf]"
+                  className="font-semibold text-[#0451bf]"
                 >
                   {data.cta.buttonText}
                 </CSButton>

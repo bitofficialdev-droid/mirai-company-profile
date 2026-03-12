@@ -101,14 +101,7 @@ export const FooterRepository = {
         { label: "Biaya Tambahan", url: "/pricing/additional-fees" },
       ],
       about: [
-        { label: "Sed Quia Consequuntur", url: "#" },
-        { label: "Magni Dolores Eos", url: "#" },
-        { label: "Qui Ratione Voluptatem", url: "#" },
-        { label: "Sequi Nesciunt", url: "#" },
-        { label: "Neque Porro Quisquam", url: "#" },
-        { label: "Est Qui Dolorem Ipsum", url: "#" },
-        { label: "Quia Dolor Sit Amet", url: "#" },
-        { label: "Consectetur Adipisci Velit", url: "#" },
+        { label: "Website Perusahaan", url: "https://miraisoftnet.com/" },
       ],
     };
   },
