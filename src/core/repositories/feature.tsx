@@ -1252,6 +1252,172 @@ export const FEATURE_DETAILS = {
       ],
     },
   },
+  "payroll-management": {
+    label: "Manajemen Payroll",
+    title: "Otomatisasi Gaji, Akurat & Tepat Waktu",
+    desc: "Selesaikan perhitungan gaji ribuan karyawan hanya dalam hitungan menit. Terintegrasi otomatis dengan data kehadiran, lembur, dan pajak.",
+    image: "/web-overtime.png",
+    content:
+      "Perhitungan payroll manual seringkali menjadi sumber kesalahan dan pemborosan waktu bagi tim HR. Bit HRMS hadir dengan mesin kalkulasi otomatis yang memproses seluruh komponen pendapatan—mulai dari gaji pokok, tunjangan, hingga potongan secara real-time. Dengan integrasi data yang seamless, Anda dapat memastikan setiap karyawan menerima haknya secara tepat waktu dengan transparansi penuh melalui slip gaji digital.",
+    benefits: [
+      {
+        title: "Kalkulasi Otomatis PPh 21",
+        desc: "Sistem secara cerdas menghitung pajak penghasilan sesuai aturan terbaru (TER) secara otomatis untuk setiap karyawan.",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="#0451bf"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              d="M12 7v10m-5-5h10M5 21h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z"
+            />
+          </svg>
+        ),
+      },
+      {
+        title: "Integrasi BPJS Kesehatan & TK",
+        desc: "Potongan iuran BPJS karyawan dan beban perusahaan dihitung otomatis berdasarkan upah minimum dan batas plafon terbaru.",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="#0451bf"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              d="M9 12l2 2l4-4m5.618-4.016A11.955 11.955 0 0 1 12 21c-2.435 0-4.69-.726-6.582-1.972A12.001 12.001 0 0 1 3 10.382V5l9-2l9 2v5.382Z"
+            />
+          </svg>
+        ),
+      },
+      {
+        title: "Disbursement Gaji Massal",
+        desc: "Lakukan pembayaran gaji ke berbagai bank sekaligus hanya dengan satu klik melalui integrasi payment gateway yang aman.",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="#0451bf"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"
+            />
+          </svg>
+        ),
+      },
+    ],
+    tips: {
+      title: "Tips Payroll yang Efisien",
+      image:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+      protip:
+        "Otomatisasi payroll dapat mengurangi risiko kesalahan input data hingga 99% dibandingkan menggunakan spreadsheet manual.",
+      items: [
+        {
+          title: "Tetapkan Cut-off Period",
+          desc: "Tentukan tanggal cut-off yang konsisten untuk kehadiran dan lembur agar tim HR memiliki waktu cukup untuk melakukan verifikasi data.",
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"
+              />
+            </svg>
+          ),
+        },
+        {
+          title: "Gunakan Slip Gaji Password-Protected",
+          desc: "Pastikan slip gaji yang dikirimkan melalui email atau aplikasi memiliki enkripsi password demi keamanan data privasi karyawan.",
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M12 15v2m-6 4h12a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2Zm10-10V7a4 4 0 1 0-8 0v4"
+              />
+            </svg>
+          ),
+        },
+        {
+          title: "Audit Berkala Master Data",
+          desc: "Lakukan review rutin pada data rekening bank dan nomor NPWP karyawan untuk menghindari gagal transfer atau kesalahan lapor pajak.",
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2"
+              />
+            </svg>
+          ),
+        },
+        {
+          title: "Sinkronisasi Lembur Real-time",
+          desc: "Pastikan persetujuan lembur sudah selesai sebelum proses payroll dimulai agar tidak ada selisih pembayaran di bulan berikutnya.",
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0a9 9 0 0 1 18 0Z"
+              />
+            </svg>
+          ),
+        },
+      ],
+    },
+  },
   "pph21-tax": {
     label: "PPH 21 & Pajak",
     title: "Kelola Pajak Karyawan dengan Akurat dan Patuh Regulasi",
